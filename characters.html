@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" class="snap-proximity">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Characters — The Conjuring</title>
+  <meta name="description" content="Meet Ed and Lorraine Warren — the investigators at the heart of The Conjuring.">
+  <link rel="icon" href="assets/favicon.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Characters — The Conjuring">
+  <meta property="og:description" content="Meet Ed and Lorraine Warren — the investigators at the heart of The Conjuring.">
+  <meta property="og:image" content="assets/og-image.jpeg">
+  <meta property="og:image:width" content="883">
+  <meta property="og:image:height" content="1256">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bevan&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <div class="cursor-light" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__track">
+      <div class="scroll-progress__flame"></div>
+    </div>
+  </div>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav__logo">The Conjuring</a>
+    <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav__links">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="synopsis.html" class="nav__link">Synopsis</a>
+      <a href="characters.html" class="nav__link active">Characters</a>
+      <a href="hidden-room.html" class="nav__link">Hidden Room</a>
+      <a href="gallery.html" class="nav__link">Gallery</a>
+      <a href="watch.html" class="nav__link">Watch</a>
+      <a href="sound.html" class="nav__link">Sound</a>
+      <a href="credits.html" class="nav__link">Credits</a>
+    </div>
+  </nav>
+
+  <!-- Characters Section -->
+  <section class="section snap-section" id="characters" style="padding-top: calc(var(--space-section) + 3.5rem);">
+    <h2 class="section__title scramble-heading">Characters</h2>
+
+    <div class="characters-grid">
+
+      <!-- Ed Warren -->
+      <div class="character-card reveal">
+        <div class="carousel tilt-card">
+          <div class="carousel__track">
+            <div class="carousel__slide"><img src="assets/characters/ed/ed-front.jpeg" alt="Ed Warren — Front view" width="600" height="800"></div>
+            <div class="carousel__slide"><img src="assets/characters/ed/ed-full-body.jpeg" alt="Ed Warren — Full Body view" width="600" height="800"></div>
+            <div class="carousel__slide"><img src="assets/characters/ed/ed-side.jpeg" alt="Ed Warren — Side view" width="600" height="800"></div>
+            <div class="carousel__slide"><img src="assets/characters/ed/ed-close-up.jpeg" alt="Ed Warren — Close-Up view" width="600" height="800"></div>
+            <div class="carousel__slide"><img src="assets/characters/ed/ed-back.jpeg" alt="Ed Warren — Back view" width="600" height="800"></div>
+          </div>
+          <div class="carousel__vignette" aria-hidden="true"></div>
+          <span class="carousel__label">Front</span>
+          <button class="carousel__btn carousel__btn--prev" aria-label="Previous angle">&#8249;</button>
+          <button class="carousel__btn carousel__btn--next" aria-label="Next angle">&#8250;</button>
+        </div>
+        <div class="carousel__dots">
+          <span class="carousel__dot active"></span>
+          <span class="carousel__dot"></span>
+          <span class="carousel__dot"></span>
+          <span class="carousel__dot"></span>
+          <span class="carousel__dot"></span>
+        </div>
+        <h3 class="character-card__name">Ed Warren</h3>
+        <p class="character-card__desc">Self-taught demonologist. The one who walks toward the noise first.</p>
+      </div>
+
+      <!-- Lorraine Warren -->
+      <div class="character-card reveal">
+        <div class="carousel tilt-card">
+          <div class="carousel__track">
+            <div class="carousel__slide"><img src="assets/characters/lorraine/lorraine-front.jpeg" alt="Lorraine Warren — Front view" width="600" height="800"></div>
+            <div class="carousel__slide"><img src="assets/characters/lorraine/lorraine-full-body.jpeg" alt="Lorraine Warren — Full Body view" width="600" height="800"></div>
+            <div class="carousel__slide"><img src="assets/characters/lorraine/lorraine-side.jpeg" alt="Lorraine Warren — Side view" width="600" height="800"></div>
+            <div class="carousel__slide"><img src="assets/characters/lorraine/lorraine-close-up.jpeg" alt="Lorraine Warren — Close-Up view" width="600" height="800"></div>
+            <div class="carousel__slide"><img src="assets/characters/lorraine/lorraine-back.jpeg" alt="Lorraine Warren — Back view" width="600" height="800"></div>
+          </div>
+          <div class="carousel__vignette" aria-hidden="true"></div>
+          <span class="carousel__label">Front</span>
+          <button class="carousel__btn carousel__btn--prev" aria-label="Previous angle">&#8249;</button>
+          <button class="carousel__btn carousel__btn--next" aria-label="Next angle">&#8250;</button>
+        </div>
+        <div class="carousel__dots">
+          <span class="carousel__dot active"></span>
+          <span class="carousel__dot"></span>
+          <span class="carousel__dot"></span>
+          <span class="carousel__dot"></span>
+          <span class="carousel__dot"></span>
+        </div>
+        <h3 class="character-card__name">Lorraine Warren</h3>
+        <p class="character-card__desc">Clairvoyant and light-trance medium. Sees what the house is trying to forget.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer snap-section">
+    <div class="site-footer__qr">
+      <div class="qr-code">
+        <img src="assets/qr/qr-code.png" alt="QR code to live site" onerror="this.style.display='none';this.parentElement.textContent='QR CODE';">
+      </div>
+      <p style="font-size:0.8125rem;color:var(--ink);opacity:0.6;margin:0;">Scan to open the live site</p>
+    </div>
+    <p class="site-footer__copy">1971 — The Conjuring — a student production, BSc Multimedia</p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/tilt.js"></script>
+  <script src="js/magnetic.js"></script>
+  <script src="js/transitions.js"></script>
+</body>
+</html>

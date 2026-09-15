@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="snap-mandatory">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Conjuring</title>
+  <meta name="description" content="The Conjuring — a 1970s supernatural horror experience. Explore the farmhouse, the hidden room, and the Warrens' investigation.">
+  <link rel="icon" href="assets/favicon.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Conjuring">
+  <meta property="og:description" content="A 1970s supernatural horror experience — the farmhouse, the hidden room, and the Warrens' investigation.">
+  <!-- TODO: replace with absolute URL before deployment (e.g. https://yourdomain.com/assets/og-image.jpeg) -->
+  <meta property="og:image" content="assets/og-image.jpeg">
+  <meta property="og:image:width" content="883">
+  <meta property="og:image:height" content="1256">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bevan&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Grain Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Jump-Scare Flash -->
+  <div class="jump-flash" aria-hidden="true"></div>
+
+  <!-- Flashlight Cursor -->
+  <div class="cursor-light" aria-hidden="true"></div>
+
+  <!-- Scroll Progress Candle -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__track">
+      <div class="scroll-progress__flame"></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav__logo">The Conjuring</a>
+    <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav__links">
+      <a href="index.html" class="nav__link active">Home</a>
+      <a href="synopsis.html" class="nav__link">Synopsis</a>
+      <a href="characters.html" class="nav__link">Characters</a>
+      <a href="hidden-room.html" class="nav__link">Hidden Room</a>
+      <a href="gallery.html" class="nav__link">Gallery</a>
+      <a href="watch.html" class="nav__link">Watch</a>
+      <a href="sound.html" class="nav__link">Sound</a>
+      <a href="credits.html" class="nav__link">Credits</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero snap-section" id="top">
+    <div class="hero__bg" data-animate>
+      <img src="assets/hero/hero-farmhouse-dusk-poster.jpeg" alt="Farmhouse at dusk" width="1920" height="1080">
+    </div>
+    <div class="hero__gradient" aria-hidden="true"></div>
+    <div class="hero__flicker" aria-hidden="true"></div>
+    <canvas class="particle-canvas" aria-hidden="true"></canvas>
+
+    <div class="hero__content">
+      <h1 class="hero__title">
+        <span class="word">
+          <span class="letter">T</span><span class="letter">H</span><span class="letter">E</span>
+        </span>
+        <span class="word">
+          <span class="letter">C</span><span class="letter">O</span><span class="letter">N</span><span class="letter">J</span><span class="letter">U</span><span class="letter">R</span><span class="letter">I</span><span class="letter">N</span><span class="letter">G</span>
+        </span>
+      </h1>
+      <p class="hero__tagline">A farmhouse. A crawl-space behind the closet wall. Two investigators who were asked to look.</p>
+      <div class="magnetic-wrap">
+        <a href="watch.html" class="btn">Watch the Scene</a>
+      </div>
+    </div>
+
+    <div class="hero__sweep" aria-hidden="true"></div>
+  </header>
+
+  <!-- Footer -->
+  <footer class="site-footer snap-section">
+    <div class="site-footer__qr">
+      <div class="qr-code">
+        <img src="assets/qr/qr-code.png" alt="QR code to live site" onerror="this.style.display='none';this.parentElement.textContent='QR CODE';">
+      </div>
+      <p style="font-size:0.8125rem;color:var(--ink);opacity:0.6;margin:0;">Scan to open the live site</p>
+    </div>
+    <p class="site-footer__copy">1971 — The Conjuring — a student production, BSc Multimedia</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/nav.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/magnetic.js"></script>
+  <script src="js/transitions.js"></script>
+  <script src="js/flash-beat.js"></script>
+</body>
+</html>

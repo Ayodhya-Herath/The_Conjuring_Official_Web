@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="snap-proximity">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hidden Room — The Conjuring</title>
+  <meta name="description" content="The hidden room behind the closet wall — scroll from the crawl-space photo to the floor-plan blueprint.">
+  <link rel="icon" href="assets/favicon.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hidden Room — The Conjuring">
+  <meta property="og:description" content="The hidden room behind the closet wall — scroll from the crawl-space photo to the floor-plan blueprint.">
+  <meta property="og:image" content="assets/og-image.jpeg">
+  <meta property="og:image:width" content="883">
+  <meta property="og:image:height" content="1256">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bevan&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <div class="jump-flash" aria-hidden="true"></div>
+  <div class="cursor-light" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__track">
+      <div class="scroll-progress__flame"></div>
+    </div>
+  </div>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav__logo">The Conjuring</a>
+    <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav__links">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="synopsis.html" class="nav__link">Synopsis</a>
+      <a href="characters.html" class="nav__link">Characters</a>
+      <a href="hidden-room.html" class="nav__link active">Hidden Room</a>
+      <a href="gallery.html" class="nav__link">Gallery</a>
+      <a href="watch.html" class="nav__link">Watch</a>
+      <a href="sound.html" class="nav__link">Sound</a>
+      <a href="credits.html" class="nav__link">Credits</a>
+    </div>
+  </nav>
+
+  <!-- Hidden Room Section -->
+  <section class="hidden-room snap-section--auto" id="hidden-room">
+    <div class="section" style="padding-top: calc(var(--space-section) + 3.5rem);">
+      <h2 class="section__title scramble-heading">The Hidden Room</h2>
+      <p class="section__subtitle">Behind the closet in the girls' room, Ed finds brick where the original blueprints show open wall. Scroll to move from the crawl-space as shot to the floor-plan that explains why no one noticed it for a hundred years.</p>
+    </div>
+
+    <!-- Scroll morph: photo → blueprint -->
+    <div class="room-morph">
+      <div class="room-morph__sticky">
+        <div class="room-morph__layer room-morph__layer--photo" style="opacity:1;">
+          <img src="assets/hidden-room/room-front-view.jpg" alt="Hidden room — production photo" width="1920" height="1080">
+        </div>
+        <div class="room-morph__layer room-morph__layer--blueprint" style="opacity:0;">
+          <img src="assets/hidden-room/room-floor-plan.jpg" alt="Hidden room — floor-plan blueprint" width="1920" height="1080">
+        </div>
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,12,16,0.1),rgba(11,12,16,0.8));pointer-events:none;"></div>
+        <div class="room-morph__hint">Scroll — photo to blueprint</div>
+      </div>
+    </div>
+
+    <!-- I'M SORRY MOMMY -->
+    <div class="room-mommy clip-reveal">
+      <div class="room-mommy__img">
+        <img src="assets/hidden-room/mommy-wall.jpg" alt="Crawl-space wall — I'M SORRY MOMMY scrawled floor to ceiling" width="1600" height="900">
+      </div>
+      <div class="room-mommy__divider"></div>
+      <p class="room-mommy__text">I'M SORRY MOMMY</p>
+    </div>
+
+    <!-- Production angle tabs -->
+    <div class="room-tabs">
+      <div class="room-tabs__buttons">
+        <button class="room-tabs__btn active" data-tab="front">Front</button>
+        <button class="room-tabs__btn" data-tab="side">Side</button>
+        <button class="room-tabs__btn" data-tab="back">Back</button>
+        <button class="room-tabs__btn" data-tab="blueprint">Floor Plan</button>
+      </div>
+      <div class="room-tabs__viewport">
+        <div class="room-tabs__panel active" data-panel="front">
+          <img src="assets/hidden-room/room-front-view.jpg" alt="Hidden room — front view" width="1600" height="900">
+        </div>
+        <div class="room-tabs__panel" data-panel="side">
+          <img src="assets/hidden-room/room-side-view.jpg" alt="Hidden room — side view" width="1600" height="900">
+        </div>
+        <div class="room-tabs__panel" data-panel="back">
+          <img src="assets/hidden-room/room-back-view.jpg" alt="Hidden room — back view" width="1600" height="900">
+        </div>
+        <div class="room-tabs__panel" data-panel="blueprint">
+          <img src="assets/hidden-room/room-floor-plan.jpg" alt="Hidden room — floor-plan blueprint" width="1600" height="900">
+        </div>
+      </div>
+    </div>
+
+    <!-- Particle layer for this section -->
+    <canvas class="particle-canvas" aria-hidden="true"></canvas>
+  </section>
+
+  <footer class="site-footer snap-section">
+    <div class="site-footer__qr">
+      <div class="qr-code">
+        <img src="assets/qr/qr-code.png" alt="QR code to live site" onerror="this.style.display='none';this.parentElement.textContent='QR CODE';">
+      </div>
+      <p style="font-size:0.8125rem;color:var(--ink);opacity:0.6;margin:0;">Scan to open the live site</p>
+    </div>
+    <p class="site-footer__copy">1971 — The Conjuring — a student production, BSc Multimedia</p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/magnetic.js"></script>
+  <script src="js/transitions.js"></script>
+  <script src="js/flash-beat.js"></script>
+</body>
+</html>

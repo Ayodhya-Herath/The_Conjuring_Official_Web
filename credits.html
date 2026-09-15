@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" class="snap-proximity">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Credits — The Conjuring</title>
+  <meta name="description" content="Credits, cast, AI tools used, and production notes for The Conjuring student project.">
+  <link rel="icon" href="assets/favicon.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Credits — The Conjuring">
+  <meta property="og:description" content="Credits, cast, AI tools used, and production notes for The Conjuring student project.">
+  <meta property="og:image" content="assets/og-image.jpeg">
+  <meta property="og:image:width" content="883">
+  <meta property="og:image:height" content="1256">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bevan&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <div class="cursor-light" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__track">
+      <div class="scroll-progress__flame"></div>
+    </div>
+  </div>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav__logo">The Conjuring</a>
+    <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav__links">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="synopsis.html" class="nav__link">Synopsis</a>
+      <a href="characters.html" class="nav__link">Characters</a>
+      <a href="hidden-room.html" class="nav__link">Hidden Room</a>
+      <a href="gallery.html" class="nav__link">Gallery</a>
+      <a href="watch.html" class="nav__link">Watch</a>
+      <a href="sound.html" class="nav__link">Sound</a>
+      <a href="credits.html" class="nav__link active">Credits</a>
+    </div>
+  </nav>
+
+  <!-- Credits Section -->
+  <section class="credits snap-section" id="credits" style="padding-top: calc(var(--space-section) + 3.5rem);">
+    <div class="credits__inner">
+      <h2 class="section__title scramble-heading reveal" style="opacity:0.9;">Credits &amp; Behind the Scenes</h2>
+
+      <div class="credits__grid reveal">
+        <div>
+          <h3 class="credits__col-title">In-World Cast</h3>
+          <ul class="credits__list">
+            <li>Ed Warren — investigator, demonologist</li>
+            <li>Lorraine Warren — clairvoyant, light-trance medium</li>
+            <li>Bathsheba — the accused witch, the presence in the house</li>
+            <li>The family — residents of the farmhouse</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="credits__col-title">AI Tools &amp; Models Used</h3>
+          <ul class="credits__list">
+            <li>ChatGPT — mood board reference imagery, color palette generation, and color-meaning writeups</li>
+            <li>Google Flow / Nano Banana 2 — character photography and video generation for Ed and Lorraine (full-body, close-up, front/side/back turntable)</li>
+            <li>Gemini — production design imagery for the hidden room (front, back, side, and floor-plan views)</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="credits__col-title">How This Was Made</h3>
+          <p class="credits__note">Every visual asset in this production — storyboard, mood board, characters, production design, poster, and scene — was generated through layered AI prompts, refined across iterations to keep character identity, costume, lighting, and color palette consistent across every shot. Human editing was limited to arranging shots, subtitles, sound mixing, color correction, and export.</p>
+        </div>
+      </div>
+
+      <div class="credits__footer reveal">
+        <p class="credits__assignment">Individual assignment — BSc Multimedia</p>
+        <details>
+          <summary>Design tokens</summary>
+          <div style="font-family:monospace;margin-top:0.625rem;display:flex;flex-direction:column;gap:0.25rem;font-size:0.75rem;">
+            <div>bg #0B0C10 · crimson #730A07 · pale blue #A8B8C4 · barnwood #5C4033 · ink #EAE6DF</div>
+            <div>headline: Bevan · body: Archivo</div>
+            <div>type scale: 12 / 14 / 15 / 17 / 26 / 40 / 56 / 150px · spacing unit: 8px</div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer snap-section">
+    <div class="site-footer__qr">
+      <div class="qr-code">
+        <img src="assets/qr/qr-code.png" alt="QR code to live site" onerror="this.style.display='none';this.parentElement.textContent='QR CODE';">
+      </div>
+      <p style="font-size:0.8125rem;color:var(--ink);opacity:0.6;margin:0;">Scan to open the live site</p>
+    </div>
+    <p class="site-footer__copy">1971 — The Conjuring — a student production, BSc Multimedia</p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/magnetic.js"></script>
+  <script src="js/transitions.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="snap-proximity">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Synopsis — The Conjuring</title>
+  <meta name="description" content="The story of The Conjuring — the Warrens, the farmhouse, and the presence behind the wall.">
+  <link rel="icon" href="assets/favicon.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Synopsis — The Conjuring">
+  <meta property="og:description" content="The story of The Conjuring — the Warrens, the farmhouse, and the presence behind the wall.">
+  <meta property="og:image" content="assets/og-image.jpeg">
+  <meta property="og:image:width" content="883">
+  <meta property="og:image:height" content="1256">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bevan&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <div class="cursor-light" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__track">
+      <div class="scroll-progress__flame"></div>
+    </div>
+  </div>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav__logo">The Conjuring</a>
+    <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav__links">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="synopsis.html" class="nav__link active">Synopsis</a>
+      <a href="characters.html" class="nav__link">Characters</a>
+      <a href="hidden-room.html" class="nav__link">Hidden Room</a>
+      <a href="gallery.html" class="nav__link">Gallery</a>
+      <a href="watch.html" class="nav__link">Watch</a>
+      <a href="sound.html" class="nav__link">Sound</a>
+      <a href="credits.html" class="nav__link">Credits</a>
+    </div>
+  </nav>
+
+  <!-- Synopsis Section -->
+  <section class="synopsis snap-section" id="synopsis">
+    <div class="synopsis__scroll">
+      <div class="synopsis__bg">
+        <img src="assets/hero/hero-farmhouse-dusk-poster.jpeg" alt="Farmhouse mood" width="1920" height="1080">
+        <div class="synopsis__bg-overlay"></div>
+      </div>
+      <div class="synopsis__card">
+        <div class="synopsis__card-inner reveal">
+          <h2 class="section__title scramble-heading">Synopsis</h2>
+          <p>1971. The Warrens are called to a farmhouse where a family has started sleeping with the lights on. Cold spots move room to room. Furniture turns over in empty houses. Something knows every name in the family.</p>
+          <p>Lorraine feels it before she sees it — a presence tied to Bathsheba, a woman hanged more than a century before, who gave her firstborn to the dark and has been offering other people's children ever since.</p>
+          <p>Behind a bricked-over closet wall, Ed finds a crawl-space no one built into the original house. The walls are covered floor to ceiling with a single scrawled line. What happens next is the reason the Warrens stopped taking cases without a priest on call.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer snap-section">
+    <div class="site-footer__qr">
+      <div class="qr-code">
+        <img src="assets/qr/qr-code.png" alt="QR code to live site" onerror="this.style.display='none';this.parentElement.textContent='QR CODE';">
+      </div>
+      <p style="font-size:0.8125rem;color:var(--ink);opacity:0.6;margin:0;">Scan to open the live site</p>
+    </div>
+    <p class="site-footer__copy">1971 — The Conjuring — a student production, BSc Multimedia</p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/magnetic.js"></script>
+  <script src="js/transitions.js"></script>
+</body>
+</html>

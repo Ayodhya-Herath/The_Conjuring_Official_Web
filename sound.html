@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="snap-proximity">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sound — The Conjuring</title>
+  <meta name="description" content="The score and song from The Conjuring — custom-styled audio players.">
+  <link rel="icon" href="assets/favicon.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sound — The Conjuring">
+  <meta property="og:description" content="The score and song from The Conjuring — custom-styled audio players.">
+  <meta property="og:image" content="assets/og-image.jpeg">
+  <meta property="og:image:width" content="883">
+  <meta property="og:image:height" content="1256">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bevan&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <div class="cursor-light" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__track">
+      <div class="scroll-progress__flame"></div>
+    </div>
+  </div>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav__logo">The Conjuring</a>
+    <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav__links">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="synopsis.html" class="nav__link">Synopsis</a>
+      <a href="characters.html" class="nav__link">Characters</a>
+      <a href="hidden-room.html" class="nav__link">Hidden Room</a>
+      <a href="gallery.html" class="nav__link">Gallery</a>
+      <a href="watch.html" class="nav__link">Watch</a>
+      <a href="sound.html" class="nav__link active">Sound</a>
+      <a href="credits.html" class="nav__link">Credits</a>
+    </div>
+  </nav>
+
+  <!-- Sound Section -->
+  <section class="section snap-section" id="sound" style="padding-top: calc(var(--space-section) + 3.5rem); max-width: 900px;">
+    <h2 class="section__title scramble-heading reveal">Sound</h2>
+    <p class="section__subtitle reveal">The score cue that plays under the crawl-space reveal, and the original song written for the credits.</p>
+
+    <div style="display:flex;flex-direction:column;gap:1.25rem;margin-top:2rem;">
+
+      <!-- Score Player -->
+      <div class="audio-player reveal">
+        <button class="audio-player__btn" aria-label="Play or pause score">
+          <div class="play-icon"></div>
+          <div class="pause-icon" style="display:none;"><span></span><span></span></div>
+        </button>
+        <div class="audio-player__info">
+          <p class="audio-player__title">Score — "The Crawl-Space"</p>
+          <div class="audio-player__progress">
+            <div class="audio-player__progress-bar"></div>
+          </div>
+          <p class="audio-player__time">0:00 / 0:00</p>
+          <audio preload="metadata">
+            <source src="assets/sound/background-score.mpeg" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+
+      <!-- Song Player -->
+      <div class="audio-player reveal">
+        <button class="audio-player__btn" aria-label="Play or pause song">
+          <div class="play-icon"></div>
+          <div class="pause-icon" style="display:none;"><span></span><span></span></div>
+        </button>
+        <div class="audio-player__info">
+          <p class="audio-player__title">Song — End-Credits Original</p>
+          <div class="audio-player__progress">
+            <div class="audio-player__progress-bar"></div>
+          </div>
+          <p class="audio-player__time">0:00 / 0:00</p>
+          <audio preload="metadata">
+            <source src="assets/sound/original-song.mpeg" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer snap-section">
+    <div class="site-footer__qr">
+      <div class="qr-code">
+        <img src="assets/qr/qr-code.png" alt="QR code to live site" onerror="this.style.display='none';this.parentElement.textContent='QR CODE';">
+      </div>
+      <p style="font-size:0.8125rem;color:var(--ink);opacity:0.6;margin:0;">Scan to open the live site</p>
+    </div>
+    <p class="site-footer__copy">1971 — The Conjuring — a student production, BSc Multimedia</p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/magnetic.js"></script>
+  <script src="js/transitions.js"></script>
+  <script src="js/audio-player.js"></script>
+</body>
+</html>

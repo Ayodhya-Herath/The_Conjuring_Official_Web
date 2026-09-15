@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" class="snap-proximity">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Watch — The Conjuring</title>
+  <meta name="description" content="Watch the two-minute crawl-space scene from The Conjuring.">
+  <link rel="icon" href="assets/favicon.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Watch — The Conjuring">
+  <meta property="og:description" content="Watch the two-minute crawl-space scene from The Conjuring.">
+  <meta property="og:image" content="assets/og-image.jpeg">
+  <meta property="og:image:width" content="883">
+  <meta property="og:image:height" content="1256">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bevan&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <div class="cursor-light" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__track">
+      <div class="scroll-progress__flame"></div>
+    </div>
+  </div>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav__logo">The Conjuring</a>
+    <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav__links">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="synopsis.html" class="nav__link">Synopsis</a>
+      <a href="characters.html" class="nav__link">Characters</a>
+      <a href="hidden-room.html" class="nav__link">Hidden Room</a>
+      <a href="gallery.html" class="nav__link">Gallery</a>
+      <a href="watch.html" class="nav__link active">Watch</a>
+      <a href="sound.html" class="nav__link">Sound</a>
+      <a href="credits.html" class="nav__link">Credits</a>
+    </div>
+  </nav>
+
+  <!-- Watch Section -->
+  <section class="section snap-section" id="watch" style="padding-top: calc(var(--space-section) + 3.5rem);">
+    <h2 class="section__title scramble-heading reveal">Watch</h2>
+    <p class="section__subtitle reveal">The two-minute scene: the crawl-space, the wall, and what Ed finds standing at the end of it.</p>
+
+    <div class="video-wrap reveal">
+      <video id="scene-video"
+             poster="assets/watch/scene-thumbnail.png"
+             preload="none"
+             controls
+             playsinline
+             width="1920" height="1080">
+        <source src="assets/watch/scene-two-minute.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <button class="video-play-btn" id="video-play-btn" aria-label="Play video">
+        <div class="video-play-btn__circle">
+          <div class="video-play-btn__triangle"></div>
+        </div>
+      </button>
+    </div>
+
+    <!-- Poster Crops -->
+    <div class="poster-grid reveal">
+      <div class="poster-card">
+        <div class="poster-card__img poster-card__img--a2">
+          <img src="assets/watch/poster-a2.jpeg" alt="Poster — A2 crop" width="595" height="842">
+        </div>
+        <p class="poster-card__label">Poster — A2</p>
+      </div>
+      <div class="poster-card">
+        <div class="poster-card__img poster-card__img--social">
+          <img src="assets/watch/poster-1080x1350.jpeg" alt="Poster — 1080×1350 crop" width="1080" height="1350">
+        </div>
+        <p class="poster-card__label">Poster — 1080×1350</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer snap-section">
+    <div class="site-footer__qr">
+      <div class="qr-code">
+        <img src="assets/qr/qr-code.png" alt="QR code to live site" onerror="this.style.display='none';this.parentElement.textContent='QR CODE';">
+      </div>
+      <p style="font-size:0.8125rem;color:var(--ink);opacity:0.6;margin:0;">Scan to open the live site</p>
+    </div>
+    <p class="site-footer__copy">1971 — The Conjuring — a student production, BSc Multimedia</p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/magnetic.js"></script>
+  <script src="js/transitions.js"></script>
+  <script>
+    /* Video play button overlay */
+    (function () {
+      var btn = document.getElementById('video-play-btn');
+      var video = document.getElementById('scene-video');
+      if (!btn || !video) return;
+
+      /* Don't autoplay heavy video on slow connections or small screens */
+      var isSmall = window.matchMedia('(max-width: 639px)').matches;
+      var conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+      var isSlow = conn && (conn.saveData || conn.effectiveType === '2g' || conn.effectiveType === 'slow-2g');
+
+      if (isSmall || isSlow) {
+        video.preload = 'none';
+      }
+
+      btn.addEventListener('click', function () {
+        btn.style.display = 'none';
+        var p = video.play();
+        if (p) p.catch(function () { btn.style.display = 'flex'; });
+      });
+
+      video.addEventListener('pause', function () {
+        if (video.currentTime > 0 && !video.ended) {
+          btn.style.display = 'flex';
+        }
+      });
+
+      video.addEventListener('play', function () {
+        btn.style.display = 'none';
+      });
+
+      video.addEventListener('ended', function () {
+        btn.style.display = 'flex';
+      });
+    })();
+  </script>
+</body>
+</html>
